@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.validation.constraints.NotBlank;
+
 @Document(collection = "notes")
 public class Note {
 
@@ -17,6 +19,7 @@ public class Note {
 
 	private String patientName;
 
+	@NotBlank(message = "Le commentaire ne peut pas être nul")
 	private String note;
 
 	@CreatedDate
