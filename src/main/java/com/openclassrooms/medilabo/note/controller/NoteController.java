@@ -32,12 +32,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/notes")
 public class NoteController {
 
-	@Autowired
 	private NoteService noteService;
-
 	private static final Logger logger = LogManager.getLogger(NoteController.class);
 
-	@Autowired
 	public NoteController(NoteService noteService) {
 		this.noteService = noteService;
 	}
